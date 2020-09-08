@@ -69,6 +69,50 @@ class Pessoa{
     {
         print("Andando")
     }
+} // fim classe pessoa
 
+// Define a classe funcionario que herda de pessoa
+class Funcionario: Pessoa{
+    var salario: Float
+    var cargo: String
+    var dataAdmissao: Date
+    var emAtividade: Bool
     
-}
+    init(pessoa: Pessoa, salario: Float, cargo: String, dataAdmissao: Date, emAtividade: Bool){
+        self.salario = salario
+        self.cargo = cargo
+        self.dataAdmissao = dataAdmissao
+        self.emAtividade = emAtividade
+        super.init(nome: pessoa.nome, cpf: pessoa.cpf, identidade: pessoa.identidade, dataNascimento: pessoa.dataNascimento, endereco: pessoa.endereco, email: pessoa.email)
+   }
+    
+    //Aumenta o salarario em x por cento
+     func AumentaSalarioEmPercentual(percetualAumento: Float) {
+         self.salario = self.salario + self.salario * (percetualAumento/100)
+     }
+    
+    // Muda o cargo do funcionario
+    func MudarCargoFuncionario(novoCargo: String){
+        self.cargo = novoCargo
+    }
+        
+   // Receber salario
+    func ReceberSalario(){
+        print("O valor de \(self.salario) foi depositado")
+    }
+    
+    // Registra do ponto do funcionario
+    func RegistrarPonto()  {
+        print("Ponto registrado com sucesso")
+    }
+    
+    //Goza ferias
+    func GozarFerias() {
+        print("Está em férias")
+    }
+    
+    //Descanso semanal
+    func Descansar() {
+        print("Está de folga")
+    }
+}// fim da classe funcionario
