@@ -15,6 +15,6 @@ Modelagem de App de Supermercado:
   isMesmoDiaMes - usada para comprar duas datas e dizer se o dia e mês são os mesmos
 
 ### Classes definidas
-  Pessoa
-  Funcionario herda pessoas
-  Produto
+  - Pessoa
+  - Funcionario herda pessoas
+  - Produto
