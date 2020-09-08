@@ -5,10 +5,10 @@
 Modelagem de App de Supermercado:
 <br>
   Requisitos mínimos:<br>
-    - três classes
-    - seis atributos para cada classe
-    - cinco métodos
-    - uma aplicação de herença
+    - três classes <br>
+    - seis atributos para cada classe <br>
+    - cinco métodos <br>
+    - uma aplicação de herença<br>
 
 ## Desenvolvido em Swift utilizando X.code versão 11.7 
 
