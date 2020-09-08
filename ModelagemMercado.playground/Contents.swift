@@ -116,3 +116,65 @@ class Funcionario: Pessoa{
         print("Está de folga")
     }
 }// fim da classe funcionario
+
+// Define a classe produto
+class Produto{
+    var codigo: String
+    var precoCompra: Float
+    var precoVenda: Float
+    var emLinha: Bool
+    var emEstoque: Bool
+    var quantidadeEmEstoque: Double
+    
+    init(codigo: String, precoCompra: Float, precoVenda: Float, emLinha: Bool, emEstoque: Bool, quantidadeEmEstoque: Double) {
+        self.codigo = codigo
+        self.precoCompra = precoCompra
+        self.precoVenda = precoVenda
+        self.emLinha = emLinha
+        self.emEstoque = emEstoque
+        self.quantidadeEmEstoque = quantidadeEmEstoque
+    }
+    
+    //Atualiza o estoque dada uma venda
+    func RegistrarVenda(quantidadeVendida: Double){
+        if (self.quantidadeEmEstoque >= quantidadeVendida)
+        {
+            self.quantidadeEmEstoque = self.quantidadeEmEstoque - quantidadeVendida
+            // caso a nova quantidade em estoque seja zero atualiza a propriedade emEstoque para false
+            if (self.quantidadeEmEstoque == 0.00)
+            {
+                self.emEstoque = false
+            }
+        }
+        else {
+            print("Quantidade vendida imcompatível com o estoque registrado")
+        }
+    }
+    
+    //Atualiza o valor de compra
+    func AtuallizarPrecoCompra(precoCompra: Float)
+    {
+        self.precoCompra = precoCompra
+    }
+    
+    //Atualiza o estoque dada uma reposição
+    func RegistraCompra(quantidadeComprada: Double, precoCompra: Float){
+        self.quantidadeEmEstoque = self.quantidadeEmEstoque + quantidadeComprada
+        // Caso o estoque do produto estivesse zerado, atualiza a propriedade em estoque para true
+        if (!self.emEstoque && quantidadeComprada > 0){
+            self.emEstoque = true
+        }
+        self.AtuallizarPrecoCompra(precoCompra: precoCompra)
+    }
+    
+    // Atualiza o preco de venda do produto
+    func AtualizarPrecoVenda(novoPreco: Float){
+        self.precoVenda = novoPreco
+    }
+    
+    //Retira o produto de linha
+    func RetirarDeLinha(){
+        self.emLinha = false
+    }
+    
+}// fim da classe produto
