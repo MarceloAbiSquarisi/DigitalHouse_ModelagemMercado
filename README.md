@@ -3,8 +3,8 @@
 ## Exercicio do curso de desenvolvimento em IoS - [Digital House](https://www.digitalhouse.com/br/)
 
 Modelagem de App de Supermercado:
-\n
-  Requisitos mínimos:\n
+<br>
+  Requisitos mínimos:<br>
     - três classes
     - seis atributos para cada classe
     - cinco métodos
