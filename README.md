@@ -4,7 +4,7 @@
 
 Modelagem de App de Supermercado:
 \n
-  Requisitos mínimos:
+  Requisitos mínimos:\n
     - três classes
     - seis atributos para cada classe
     - cinco métodos
